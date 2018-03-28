@@ -1,0 +1,58 @@
+
+个人电脑配置：
+    cpu    E5620
+    显卡   GT70Ti
+    系统   win10
+我安装好的版本
+    Python 3.6.4
+    Tensorflow-gpu 1.5.0
+    CUDA Toolkit 9.0
+    cuDNN v7.0.4 (Dec 5, 2017), for CUDA 9.0
+    备注: cuDNN  v7.x.x应该都可以
+
+##############################################################################################
+
+学习网址
+网址1：
+    https://blog.csdn.net/lp654063449/article/details/79340655
+网址2
+     https://blog.csdn.net/sinat_27421407/article/details/79575845
+   tensorflow
+网址3
+    https://github.com/tensorflow/tensorflow/releases/tag/v1.6.0
+
+##############################################################################################
+
+备注:
+    可以参考网址1进行安装
+    为什么安装GPU
+         运行快
+    之所以没有安装tensorflow1.6
+        是因为我电脑cpu不支持指令集AUX
+        具体参考网址2
+    网址3作为学习参考
+
+##############################################################################################
+
+cmd命令  （仅作为参考  因为有的出问题了还加--ignore  可参考http://www.sohu.com/a/226434165_820120）
+   卸载tensorflow-gpu
+    pip uninstall tensflow-gpu
+   安装tensorflow-gpu
+      pip install tensorflow-gpu
+      pip install tensorflow-gup==1.5
+      pip install ‘path of *.whl’
+
+##############################################################################################
+
+运行结果
+    future warining
+        D:\Program Files\Abacibda36\lib\site-packages\h5py\__init__.py:36: FutureWarning: Conversion of the second argument of issubdtype from `float` to `np.floating` is deprecated. In future, it will be treated as `np.float64 == np.dtype(float).type`.
+        from ._conv import register_converters as _register_converters
+    GPU加速成功
+        2018-03-28 12:14:38.327123: I C:\tf_jenkins\workspace\rel-win\M\windows-gpu\PY\36\tensorflow\core\common_runtime\gpu\gpu_device.cc:1105] Found device 0 with properties:
+        name: GeForce GTX 750 Ti major: 5 minor: 0 memoryClockRate(GHz): 1.0845
+        pciBusID: 0000:04:00.0
+        totalMemory: 2.00GiB freeMemory: 1.65GiB
+        2018-03-28 12:14:38.329911: I C:\tf_jenkins\workspace\rel-win\M\windows-gpu\PY\36\tensorflow\core\common_runtime\gpu\gpu_device.cc:1195] Creating TensorFlow device (/device:GPU:0) -> (device: 0, name: GeForce GTX 750 Ti, pci bus id: 0000:04:00.0, compute capability: 5.0)
+     输出结果
+         b'Hello!TensorFlow'   （备注:这里为什么会多一个b   并且输出结果还有单引号）
